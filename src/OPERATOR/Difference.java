@@ -1,9 +1,10 @@
 package OPERATOR;
 
 import MODELE.*;
+import WORK.*;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Arrays;
+import java.util.List;
 
 public class Difference {
     
@@ -12,6 +13,16 @@ public class Difference {
         Relation r1;
         Relation r2;
         List<Object[]> new_relation = new ArrayList<>();
+
+        for (Relation relation : relations) {
+            if (!ClassValidator.f_validator(relation)) {
+                System.out.println("\n Validation échouée pour: " + relation.getNom());
+                return null;
+            } else if (!ColumnValidator.f_validator(relations)) {
+                System.out.println("\n Les nombres de colonnes ne correspondent pas : " + relation.getNom());
+                return null;
+            }
+        }
 
         for (int i = 0; i < relations.length - 1; i++) {
             r1 = relations[i];

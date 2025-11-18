@@ -14,7 +14,7 @@ public class Main {
 
         Domaine[] d1 = new Domaine[3];
         d1[0] = new Domaine(new Class[]{Integer.class, String.class});
-        d1[1] = new Domaine(new Class[]{String.class});
+        d1[1] = new Domaine(new Class[]{String.class, Integer.class});
         d1[2] = new Domaine(new Class[]{Integer.class,String.class});
 
         Object[][] donnees1 = new Object[3][3];
@@ -46,21 +46,15 @@ public class Main {
         Relation[] r = new Relation[2];
         r[0] = new Relation("r1", noms_colonnes1, d1,donnees1);
         r[1] = new Relation("r2", noms_colonnes2, d1,donnees2);
-
-        //if (ClassValidator.f_validator(donnees1, d1)&&
-            //ClassValidator.f_validator(donnees2, d1)) {
-            
+        
                 //Relation unionResult = Union.f_unions(r);
-                //Relation intersectionResult = Intersection.f_intersections(r);
                 //Relation produitCartesienResult = ProduitCartesien.f_produitcartesien(r);
-                //Relation differenceResult = Difference.f_differences(r);
+                //Relation intersectionResult = Intersection.f_intersections(r);
                 //Relation projectionResult = Projection.f_projection(r[0], noms_colonnes1);
-        //} else {
-            //System.out.println("\n Y a un problème :/");
-        //}
+                //Relation selectionResult = Selection.f_selection(r[0], "ID", "!=", "louBa");
 
-        //Relation selectionResult = Selection.f_selection(r[0], "ID", "!=", "louBa");
-        Relation unionResult = Union.f_unions(r);
-        RelationShow.displayRelation(unionResult);                
+    
+        Relation differenceResult = Difference.f_differences(r);
+        RelationShow.displayRelation(differenceResult);                
     }
 }
