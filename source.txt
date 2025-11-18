@@ -1,0 +1,16 @@
+src/WORK/ClassValidator.java
+src/WORK/ColumnIndex.java
+src/WORK/ColumnValidator.java
+src/WORK/ConditionValidator.java
+src/WORK/CoupleDeletor.java
+src/WORK/RelationShow.java
+src/WORK/isNumber.java
+src/OPERATOR/Difference.java
+src/OPERATOR/Intersection.java
+src/OPERATOR/ProduitCartesien.java
+src/OPERATOR/Projection.java
+src/OPERATOR/Selection.java
+src/OPERATOR/Union.java
+src/MODELE/Domaine.java
+src/MODELE/Relation.java
+src/MAIN/Main.java
