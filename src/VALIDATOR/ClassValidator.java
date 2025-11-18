@@ -1,4 +1,4 @@
-package WORK;
+package VALIDATOR;
 
 import java.util.Arrays;
 import MODELE.*;

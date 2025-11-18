@@ -1,7 +1,7 @@
 package OPERATOR;
 
 import MODELE.*;
-import WORK.*;
+import VALIDATOR.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

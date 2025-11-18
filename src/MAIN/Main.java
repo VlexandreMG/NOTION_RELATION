@@ -2,7 +2,7 @@ package MAIN;
 
 import MODELE.*;
 import OPERATOR.*;
-import WORK.*;
+import VIEW.*;
 
 public class Main {
     

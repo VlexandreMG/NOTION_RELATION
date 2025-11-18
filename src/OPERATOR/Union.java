@@ -1,10 +1,10 @@
 package OPERATOR;
 
+import MODELE.*;
+import VALIDATOR.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import MODELE.*;
-import WORK.*;
 
 public class Union {
     

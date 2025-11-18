@@ -1,11 +1,9 @@
 package OPERATOR;
 
+import MODELE.Relation;
+import UTILS.*;
 import java.util.ArrayList;
 import java.util.List;
-
-import MODELE.Relation;
-import WORK.ColumnIndex;
-import WORK.CoupleDeletor;
 
 public class Projection {
     

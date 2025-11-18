@@ -1,4 +1,6 @@
-package WORK;
+package VALIDATOR;
+
+import UTILS.*;
 
 public class ConditionValidator {
     

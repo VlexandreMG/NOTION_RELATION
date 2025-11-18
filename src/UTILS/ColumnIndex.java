@@ -1,4 +1,4 @@
-package WORK;
+package UTILS;
 
 public class ColumnIndex {
     

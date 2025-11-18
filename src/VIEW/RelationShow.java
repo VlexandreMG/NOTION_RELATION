@@ -1,6 +1,6 @@
-package WORK;
+package VIEW;
 
-import MODELE.Relation;
+import MODELE.*;
 
 public class RelationShow {
     
