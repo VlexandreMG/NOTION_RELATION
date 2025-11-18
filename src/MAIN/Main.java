@@ -55,7 +55,7 @@ public class Main {
                 //Relation produitCartesienResult = ProduitCartesien.f_produitcartesien(r);
                 //Relation differenceResult = Difference.f_differences(r);
                 //Relation projectionResult = Projection.f_projection(r[0], noms_colonnes1);
-                Relation selectionResult = Selection.f_selection(r[0], noms_colonnes1, "<", "40");
+                Relation selectionResult = Selection.f_selection(r[0], "Age", "<", "40");
                 RelationShow.displayRelation(selectionResult);                
         } else {
             System.out.println("\n Y a un problème :/");

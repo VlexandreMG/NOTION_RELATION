@@ -8,7 +8,7 @@ import java.util.List;
 
 public class Selection {
     
-    public static Relation f_selection(Relation r, String[] colonne, String operateur, String valeur) {
+    public static Relation f_selection(Relation r, String colonne, String operateur, String valeur) {
         
         List<Object[]> resultat = new ArrayList<>();
         String[] nomsColonnes = r.getNoms_colonnes();
@@ -16,7 +16,7 @@ public class Selection {
         // Trouver l'index de la colonne
         int indexColonne = -1;
         for (int i = 0; i < nomsColonnes.length; i++) {
-            if (nomsColonnes[i].equals(colonne[i])) {
+            if (nomsColonnes[i].equals(colonne)) {
                 indexColonne = i;
                 break;
             }
