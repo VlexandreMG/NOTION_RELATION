@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import MODELE.*;
+import WORK.*;
 
 public class Union {
     
@@ -12,6 +13,16 @@ public class Union {
 
         Relation base = relations[0];
         List<Object[]> nouveau = new ArrayList<>();
+
+        for (Relation relation : relations) {
+            if (!ClassValidator.f_validator(relation)) {
+                System.out.println("\n Validation échouée pour: " + relation.getNom());
+                return null;
+            } else if (!ColumnValidator.f_validator(relations)) {
+                System.out.println("\n Les nombres de colonnes ne correspondent pas : " + relation.getNom());
+                return null;
+            }
+        }
 
         for (Relation relation : relations) {
             for (Object[] individu : relation.getIndividus()) {

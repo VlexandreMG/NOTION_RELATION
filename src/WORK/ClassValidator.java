@@ -1,45 +1,40 @@
 package WORK;
 
 import java.util.Arrays;
-
-import MODELE.Domaine;
+import MODELE.*;
 
 public class ClassValidator {
    
-    public static boolean f_validator(Object[][] donnees , Domaine[] types_colonnes) {
+    public static boolean f_validator(Relation r) {
 
-        if (ColumnValidator.f_validator(donnees, types_colonnes)) {
-            for (int i = 0; i < donnees.length; i++) {
-                for (int j = 0; j < donnees[i].length; j++) {
-                    Class type_donnee = donnees[i][j].getClass();
-                    
-                    boolean type_valide = false;
-        
-                    for (Class type_accepte : types_colonnes[i].getType()) {
-                        if (type_donnee.equals(type_accepte)) {
-                            type_valide = true;
-                            break;
-                        }
+        Object[][] donnees = r.getIndividus();
+        Domaine[] types_colonnes = r.getTypes_colonnes();
+
+        for (int i = 0; i < donnees.length; i++) {
+            for (int j = 0; j < donnees[i].length; j++) {
+                Class type_donnee = donnees[i][j].getClass();
+                
+                boolean type_valide = false;
+    
+                for (Class type_accepte : types_colonnes[j].getType()) {  // ⚠️ j pas i!
+                    if (type_donnee.equals(type_accepte)) {
+                        type_valide = true;
+                        break;
                     }
-                    
-                        if (!type_valide) {
-    System.out.println("\n Type de donnée : " + type_donnee.getName() + 
-                      " ne correspond pas avec les types acceptés pour la colonne " + i + " : " + 
-                      Arrays.toString(types_colonnes[i].getType()));
-    return false;
-} else {
-    System.out.println("\n Type de donnée : " + type_donnee.getName() + 
-                      " correspond avec les types de la colonne " + i + " : " + 
-                      Arrays.toString(types_colonnes[i].getType()));
-}
                 }
-            
+                
+                if (!type_valide) {
+                    System.out.println("\n Erreur - Ligne " + i + ", Colonne " + j + 
+                        " : Type " + type_donnee.getName() + 
+                        " n'est pas dans " + Arrays.toString(types_colonnes[j].getType()));
+                    return false;
+                }
+                // ❌ SUPPRIMER le else qui retournait true trop tôt
+            }
         }
-        return true; // Tous les types sont valides
-
-        } else {
-            System.out.println("\n Validation des colonnes échouée.");
-            return false;
-        }
+        
+        // ✅ UNIQUEMENT ici, après avoir vérifié TOUTES les cellules
+        System.out.println("\n ✅ Tous les types sont valides!");
+        return true;
     }
 }
