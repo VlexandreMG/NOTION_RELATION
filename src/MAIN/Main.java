@@ -35,9 +35,9 @@ public class Main {
         donnees2[0][1] = "Alex";
         donnees2[0][2] = 30;
 
-        donnees2[1][0] = "louba";
+        donnees2[1][0] = "Balou";
         donnees2[1][1] = 50;
-        donnees2[1][2] = "Kirikou";
+        donnees2[1][2] = 80;
 
         donnees2[2][0] = 600;
         donnees2[2][1] = 50;
@@ -52,9 +52,9 @@ public class Main {
                 //Relation intersectionResult = Intersection.f_intersections(r);
                 //Relation projectionResult = Projection.f_projection(r[0], noms_colonnes1);
                 //Relation selectionResult = Selection.f_selection(r[0], "ID", "!=", "louBa");
+                // Relation differenceResult = Difference.f_differences(r);
 
-    
-        Relation differenceResult = Difference.f_differences(r);
-        RelationShow.displayRelation(differenceResult);                
+        Relation test_fotsn = Jointure.join(r,"ID");
+        RelationShow.displayRelation(test_fotsn);                
     }
 }

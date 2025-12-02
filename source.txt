@@ -4,6 +4,7 @@ src/OPERATOR/ProduitCartesien.java
 src/OPERATOR/Projection.java
 src/OPERATOR/Selection.java
 src/OPERATOR/Union.java
+src/OPERATOR/Jointure.java
 src/MODELE/Domaine.java
 src/MODELE/Relation.java
 src/MAIN/Main.java
@@ -13,4 +14,6 @@ src/VALIDATOR/ConditionValidator.java
 src/UTILS/ColumnIndex.java
 src/UTILS/CoupleDeletor.java
 src/UTILS/isNumber.java
+src/UTILS/StringView.java
+src/UTILS/Linefusion.java
 src/VIEW/RelationShow.java
