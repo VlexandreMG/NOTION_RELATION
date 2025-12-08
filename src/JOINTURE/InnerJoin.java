@@ -1,10 +1,10 @@
-package OPERATOR;
+package JOINTURE;
 
 import MODELE.*;
 import UTILS.*;
 import java.lang.*;
 import java.util.*;
-public class Jointure {
+public class InnerJoin {
 
     public static Relation join(Relation[] relations, String nomColonne) {
         if (relations.length != 2) {

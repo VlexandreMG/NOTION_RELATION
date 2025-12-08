@@ -1,7 +1,7 @@
 package MAIN;
 
+import JOINTURE.*;
 import MODELE.*;
-import OPERATOR.*;
 import VIEW.*;
 
 public class Main {
@@ -53,8 +53,9 @@ public class Main {
                 //Relation projectionResult = Projection.f_projection(r[0], noms_colonnes1);
                 //Relation selectionResult = Selection.f_selection(r[0], "ID", "!=", "louBa");
                 // Relation differenceResult = Difference.f_differences(r);
-
-        Relation test_fotsn = Jointure.join(r,"ID");
+                //Relation test_fotsn = InnerJoin.join(r,"ID");
+                        
+        Relation test_fotsn = LeftJoin.join(r,"ID");
         RelationShow.displayRelation(test_fotsn);                
     }
 }
