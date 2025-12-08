@@ -54,8 +54,9 @@ public class Main {
                 //Relation selectionResult = Selection.f_selection(r[0], "ID", "!=", "louBa");
                 // Relation differenceResult = Difference.f_differences(r);
                 //Relation test_fotsn = InnerJoin.join(r,"ID");
-                        
-        Relation test_fotsn = LeftJoin.join(r,"ID");
+                //Relation test_fotsn = LeftJoin.join(r,"ID");
+        
+                Relation test_fotsn = RightJoin.join(r,"ID");
         RelationShow.displayRelation(test_fotsn);                
     }
 }
