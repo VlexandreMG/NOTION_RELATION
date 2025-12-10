@@ -19,3 +19,4 @@ src/VIEW/RelationShow.java
 src/JOINTURE/InnerJoin.java
 src/JOINTURE/LeftJoin.java
 src/JOINTURE/RightJoin.java
+src/JOINTURE/CrossJoin.java
