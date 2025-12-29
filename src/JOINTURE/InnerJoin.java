@@ -30,7 +30,7 @@ public class InnerJoin {
                 if (Objects.equals(ligneR1[indexColonneR1], ligneR2[indexColonneR2])) {
                     // Fusionner les deux lignes (sans dupliquer la colonne de jointure)
                     resultat.add(Linefusion.fusionnerLignes(ligneR1, ligneR2, indexColonneR2));
-                }
+                } 
             }
         }
 

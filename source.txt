@@ -20,3 +20,4 @@ src/JOINTURE/InnerJoin.java
 src/JOINTURE/LeftJoin.java
 src/JOINTURE/RightJoin.java
 src/JOINTURE/CrossJoin.java
+src/JOINTURE/FullJoin.java

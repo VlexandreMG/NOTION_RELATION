@@ -30,7 +30,7 @@ public class Main {
         donnees1[2][1] = 45;
         donnees1[2][2] = 10;
 
-        Object[][] donnees2 = new Object[3][3];
+        Object[][] donnees2 = new Object[4][3];
         donnees2[0][0] = 1;
         donnees2[0][1] = "Alex";
         donnees2[0][2] = 30;
@@ -42,6 +42,10 @@ public class Main {
         donnees2[2][0] = 600;
         donnees2[2][1] = 50;
         donnees2[2][2] = "koukiri";
+
+        donnees2[3][0] = 456;
+        donnees2[3][1] = 89;
+        donnees2[3][2] = "loulou";
 
         Relation[] r = new Relation[2];
         r[0] = new Relation("r1", noms_colonnes1, d1,donnees1);
@@ -55,9 +59,9 @@ public class Main {
                 //Relation differenceResult = Difference.f_differences(r);
                 //Relation test_fotsn = InnerJoin.join(r,"ID");
                 //Relation test_fotsn = LeftJoin.join(r,"ID");
-                //Relation test_fotsn = RightJoin.join(r,"ID");
-                Relation test_fotsn = CrossJoin.cross(r);
-
+                Relation test_fotsn = RightJoin.join(r,"ID");
+                //Relation test_fotsn = CrossJoin.cross(r);
+                //Relation test_fotsn = FullJoin.join(r,"ID");
         RelationShow.displayRelation(test_fotsn);                
     }
 }
